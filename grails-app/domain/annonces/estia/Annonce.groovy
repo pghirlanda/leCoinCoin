@@ -10,8 +10,6 @@ class Annonce {
     Date dateCreated
     Date lastUpdated
 
-    String adeline
-
     static belongsTo = [author: User]
     static hasMany = [illustrations: Illustration]
     static constraints = {
