@@ -6,7 +6,7 @@ class Annonce {
     String description
     Float price
     Boolean active = Boolean.FALSE
-    String cava
+
 
     Date dateCreated
     Date lastUpdated
