@@ -5,7 +5,7 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'annonces.estia.Us
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'annonces.estia.UserRole'
 grails.plugin.springsecurity.authority.className = 'annonces.estia.Role'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	[pattern: '/',               access: ['permitAll']],
+	[pattern: '/**',               access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],
 	[pattern: '/index',          access: ['permitAll']],
 	[pattern: '/index.gsp',      access: ['permitAll']],

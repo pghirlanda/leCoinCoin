@@ -254,6 +254,11 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  width: 200px;
+  height: 50px;
+  border-radius: 6px;
+  background-color: #ffeebc;
+  border-color: #ffc924;
 }
 
 button,

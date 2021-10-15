@@ -1,0 +1,33 @@
+.controller1{
+    flex-grow: 1;
+    padding-right: 40px;
+    color: black;
+
+
+}
+
+.controller2{
+    flex-grow: 1;
+
+}
+
+.imgAnn{
+    height: 50px;
+}
+
+.imgUser{
+    height: 50px;
+    padding-leftt: 40px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+body, html{
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+}
