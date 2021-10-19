@@ -4,8 +4,10 @@
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'annonces.estia.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'annonces.estia.UserRole'
 grails.plugin.springsecurity.authority.className = 'annonces.estia.Role'
+grails.plugin.springsecurity.logout.postOnly = false
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	[pattern: '/**',               access: ['permitAll']],
+	[pattern: '/',               access: ['permitAll']],
+	[pattern: '/user/create',    access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],
 	[pattern: '/index',          access: ['permitAll']],
 	[pattern: '/index.gsp',      access: ['permitAll']],
@@ -15,7 +17,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/**/css/**',      access: ['permitAll']],
 	[pattern: '/**/images/**',   access: ['permitAll']],
 	[pattern: '/**/favicon.ico', access: ['permitAll']],
-	[pattern: '/dbconsole/**', access: ['permitAll']]
+	[pattern: '/dbconsole/**',   access: ['permitAll']]
 ]
 
 grails.plugin.springsecurity.filterChain.chainMap = [

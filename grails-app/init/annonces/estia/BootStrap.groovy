@@ -33,10 +33,10 @@ class BootStrap {
                         userInstance.addToAnnonces(annonceInstance)
                 }
                 userInstance.save(flush: true, failOnError: true)
+                UserRole.create(userInstance, clientRole, true)
         }
 
     }
     def destroy = {
-
     }
 }

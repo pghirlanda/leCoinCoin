@@ -126,5 +126,7 @@ environments:
                 testOnReturn: false
                 jdbcInterceptors: ConnectionState
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
+logout:
+    grails.plugin.springsecurity.logout.postOnly = false
 server:
     port: 8081

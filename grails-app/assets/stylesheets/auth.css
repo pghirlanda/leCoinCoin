@@ -1,0 +1,123 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "login";
+    justify-items: center;
+    align-items: center;
+
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    line-height: 1.5;
+
+    background-color: rgb(255, 255, 255);
+    background-image: url("../../assets/connexion.PNG");
+    background-position: left bottom;
+    background-size: auto;
+}
+
+.inner{
+    grid-area: login;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+    padding: 5%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #adb5bd;
+}
+
+h2{
+    font-size: 1.3em;
+    text-align: center;
+    margin-block-start: 0.8em;
+    margin-block-end: 0.8em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h5{
+    color: black;
+    font-size: 0.8em;
+    text-align: center;
+    margin-block-start: 1.6em;
+    margin-block-end: 1.6em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.allUsername, .allMdp{
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    position: relative;
+    margin-bottom: 6%;
+}
+
+.username, .mdp{
+    margin: 0.38em 1px 0px;
+    padding: 0.84em;
+    text-indent: 0.18em;
+    background: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(202, 209, 217);
+    border-radius: 4px;
+    color: rgb(26, 26, 26);
+    font-weight: 300;
+}
+
+.mdp{
+    margin-bottom: 2%;
+}
+
+.mdpOublie{
+    color: rgb(65, 131, 215);
+    font-size: 1.1rem;
+}
+
+.bouton{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+#submit{
+    flex: 1 1 0%;
+
+    border: 1px solid transparent;
+    color: rgb(255, 255, 255);
+    background-color: rgb(65, 131, 215);
+
+    border-radius: 4px;
+    transition: background-color 300ms ease 0s, color 300ms ease 0s;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    justify-content: center;
+    min-height: 4rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+}
+
+.creationCompte, #remember_me_holder{
+    font-size: 0.813em;
+    margin-bottom: 5%;
+}
+
+.creationCompte{
+    text-align: center;
+}
+
+.login_message{
+    margin-bottom: 5%;
+    margin-top: 2%;
+    color: lightcoral;
+}

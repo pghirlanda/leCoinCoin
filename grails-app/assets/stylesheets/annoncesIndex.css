@@ -1,0 +1,51 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.annonces{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+
+.annonce{
+    flex-grow: 1;
+    border: black;
+    border-radius: 10px;
+    margin: 4%;
+    padding: 4%;
+}
+
+.image{
+    height: 100px;
+    width: 100px;
+}
+
+.titreprix{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.author{
+    text-align: right;
+}
+
+.titre{
+    font-size: 1.2em;
+    margin-block-start: 0.8em;
+    margin-block-end: 0.8em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.prix{
+    margin-block-start: 0.8em;
+    margin-block-end: 0.8em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
