@@ -27,7 +27,6 @@ class UserController {
 
     def create() {
         respond new User(params)
-        role1 = Role.findByAuthority("ROLE_CLIENT")
     }
 
     def save(User user) {
@@ -37,6 +36,11 @@ class UserController {
         }
         try {
             userService.save(user)
+            if (params.nouveauRole == null){
+                role1 = Role.findByAuthority("ROLE_CLIENT")
+            }else{
+                role1 = Role.findById(params.nouveauRole)
+            }
             UserRole.create(user, role1, true)
         } catch (ValidationException e) {
             respond user.errors, view:'create'

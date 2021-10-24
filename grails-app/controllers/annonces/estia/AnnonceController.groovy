@@ -11,7 +11,7 @@ class AnnonceController {
     AnnonceService annonceService
     SpringSecurityService springSecurityService
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -20,6 +20,11 @@ class AnnonceController {
 
     def show(Long id) {
         respond annonceService.get(id)
+    }
+
+    def showList(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        respond annonceService.list(params), model: [annonceCount: annonceService.count()]
     }
 
     def create() {
@@ -32,21 +37,21 @@ class AnnonceController {
             return
         }
 
-        def uploadedFile = ((MultipartHttpServletRequest) request).getFiles("filename")
-        def generator = { String alphabet, int n ->
-            new Random().with {
-                (1..n).collect { alphabet[nextInt(alphabet.length())] }.join()
-            }
-        }
-        uploadedFile.each {
-            String nom = generator((('A'..'Z') + ('0'..'9')).join(), 9)
-            String chemin = "C:/Users/p.ghirlanda/Desktop/Cours/3A/MBDS/WEB/Projet/projet-grails-master/grails-app/assets/images/" + nom
-            it.transferTo(new File(chemin))
-            def illustra = new Illustration(filename: nom)
-            annonce.addToIllustrations(illustra)
-        }
-
         try {
+            def uploadedFile = ((MultipartHttpServletRequest) request).getFiles("filename")
+            def generator = { String alphabet, int n ->
+                new Random().with {
+                    (1..n).collect { alphabet[nextInt(alphabet.length())] }.join()
+                }
+            }
+            uploadedFile.each {
+                String nom = generator((('A'..'Z') + ('0'..'9')).join(), 9)
+                String chemin = grailsApplication.config.illustration.path + nom
+                it.transferTo(new File(chemin))
+                def illustra = new Illustration(filename: nom)
+                annonce.addToIllustrations(illustra)
+            }
+
             if(annonce.author == null){
                 annonce.author = springSecurityService.getCurrentUser()
             }
@@ -74,8 +79,24 @@ class AnnonceController {
             notFound()
             return
         }
-
         try {
+//            if (params.fieldName != null){
+                println params.filename
+                def uploadedFile = ((MultipartHttpServletRequest) request).getFiles("filename")
+                def generator = { String alphabet, int n ->
+                    new Random().with {
+                        (1..n).collect { alphabet[nextInt(alphabet.length())] }.join()
+                    }
+                }
+                uploadedFile.each {
+                    String nom = generator((('A'..'Z') + ('0'..'9')).join(), 9)
+                    String chemin = grailsApplication.config.illustration.path + nom
+                    it.transferTo(new File(chemin))
+                    def illustra = new Illustration(filename: nom)
+                    annonce.addToIllustrations(illustra)
+                }
+//            }
+
             if(annonce.author == null){
                 annonce.author = springSecurityService.getCurrentUser()
             }

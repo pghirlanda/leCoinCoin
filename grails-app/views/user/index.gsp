@@ -3,48 +3,47 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'user.label', default: 'User')}" />
-        <title><g:message code="default.list.label" args="[entityName]" /></title>
+        <title>Liste des utilisateurs</title>
+        <link href="../../assets/indexUser.css" rel="stylesheet" type="text/css" media="all" />
     </head>
     <body>
         <a href="#list-user" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+                <li><a class="home" href="${createLink(uri: '/')}"><img class="imgHome" src="../../assets/house.png"/> Retour à l'accueil</a></li>
+                <li><g:link class="create" action="create"><img src="../../assets/addUser.png"/> Ajouter un nouvel utilisateur</g:link></li>
             </ul>
         </div>
         <div id="list-user" class="content scaffold-list" role="main">
-            <h1><g:message code="default.list.label" args="[entityName]" /></h1>
+            <h1>Utilisateurs du site LeCoinCoin</h1>
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
-
-            <table>
-                <thead>
-                <tr>
-                    <th class="sortable"><a href="/user/index?sort=username&amp;max=10&amp;order=asc">Username</a></th>
-                    <th class="sortable"><a href="/user/index?sort=email&amp;max=10&amp;order=asc">Email</a></th>
-                    <th class="sortable"><a href="/user/index?sort=tel&amp;max=10&amp;order=asc">Tel</a></th>
-                    <th></th>
-                    <th></th>
-                    <th class="sortable"><a href="/user/index?sort=tel&amp;max=10&amp;order=asc">Role</a></th>
-                </tr>
-                </thead>
-                <tbody>
-                    <g:each in="${userList}" var="user">
-                        <tr class="even">
-                            <td><g:link controller="user" action="show" id="${user.id}">${user.username}</g:link></td>
-                            <td>${user.email}</td>
-                            <td>${user.tel}</td>
-                            <td><button><g:link controller="user" action="edit" id="${user.id}">Modifier</g:link></button></td>
-                            <td><button onclick="return confirm('Etes-vous sûr?')"><g:link controller="user" action="delete" id="${user.id}">Supprimer</g:link></button></td>
+            <div class="listUtilisateur">
+                <g:each in="${userList}" var="user">
+                    <div class="utilisateur">
+                        <h2 class="nom"><g:link class="lienNom" controller="user" action="show" id="${user.id}">${user.username}</g:link></h2>
+                        <div class="mail">E-mail : ${user.email}</div>
+                        <div class="tel">Numéro de téléphone :
+                            <if test="${user.tel!=null}">
+                                ${user.tel}
+                            </if>
+                            <esle>
+                                inconnu
+                            </esle>
+                        </div>
+                        <div class="role">Rôle :
                             <g:each in="${user.getAuthorities()}" var="userRole">
-                                <td>${userRole.authority}</td>
+                                ${userRole.authority}
                             </g:each>
-                        </tr>
-                    </g:each>
-                </tbody>
-            </table>
+                        </div>
+                        <div class="boutons">
+                            <button class="modifier"><g:link class="lien" controller="user" action="edit" id="${user.id}">Modifier</g:link></button>
+                            <button onclick="return confirm('Etes-vous sûr?')"><g:link class="lien" controller="user" action="delete" id="${user.id}">Supprimer</g:link></button>
+                        </div>
+                    </div>
+                </g:each>
+            </div>
 
             <div class="pagination">
                 <g:paginate total="${userCount ?: 0}" />

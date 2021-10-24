@@ -1,0 +1,77 @@
+img{
+    height: 25px;
+}
+
+.listUtilisateur{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.listUtilisateur>*{
+    flex: 1 1 25%;
+}
+
+.utilisateur{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: black;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 2%;
+    box-shadow: 2px 3px 3px 3px lightgray;
+}
+
+.lien{
+    text-decoration: none;
+    color: white;
+}
+
+.lienNom{
+    text-decoration: none;
+    color: #FF6B17;
+}
+
+.nom{
+    font-size: x-large;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.boutons{
+    display: flex;
+}
+
+button{
+    border: 1px solid transparent;
+    color: rgb(255, 255, 255);
+    background-color: rgb(65, 131, 215);
+    width: 150px;
+    height: 30px;
+
+    border-radius: 4px;
+    transition: background-color 300ms ease 0s, color 300ms ease 0s;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    justify-content: center;
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+}
+
+.modifier{
+    margin-right: 4px;
+}
+
+.role{
+    margin-bottom: 20px;
+}
+
+h1{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+}

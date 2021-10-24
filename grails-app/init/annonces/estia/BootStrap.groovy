@@ -16,7 +16,7 @@ class BootStrap {
         ["Alice", "Bob", "Charlie", "Dany", "Etienne"].each{
             String username ->
                 def userInstance = new User(username: username, password: "password", email: username + "@estia.fr")
-                (1..5).each{
+                (1..3).each{
                     Integer annonceIdx ->
                         def annonceInstance = new Annonce(
                                 title: "Title $username $annonceIdx",
@@ -24,9 +24,22 @@ class BootStrap {
                                 price: 100F * annonceIdx,
                                 active: true
                         )
+                        (1..3).each{
+                            Integer illustrationIdx ->
+                                annonceInstance.addToIllustrations(new Illustration(filename: "grails.svg"))
+                        }
+                        userInstance.addToAnnonces(annonceInstance)
+                }
 
-                        (1..5).each{
-
+                (1..2).each{
+                    Integer annonceIdx ->
+                        def annonceInstance = new Annonce(
+                                title: "Title $username $annonceIdx",
+                                description: "Description $username $annonceIdx",
+                                price: 100F * annonceIdx,
+                                active: false
+                        )
+                        (1..2).each{
                             Integer illustrationIdx ->
                                 annonceInstance.addToIllustrations(new Illustration(filename: "grails.svg"))
                         }

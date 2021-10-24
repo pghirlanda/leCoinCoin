@@ -1,3 +1,9 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 /* FONT STACK */
 body,
 input, select, textarea {
@@ -36,9 +42,9 @@ body {
     background-color: #F5F5F5;
     color: #333333;
     overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
-    -moz-box-shadow: 0 0 0.3em #424649;
-    -webkit-box-shadow: 0 0 0.3em #424649;
-    box-shadow: 0 0 0.3em #424649;
+    -moz-box-shadow: 0 0 0.3em #CDCFDB;
+    -webkit-box-shadow: 0 0 0.3em #CDCFDB;
+    box-shadow: 0 0 0.3em #CDCFDB;
 }
 
 #grailsLogo {
@@ -90,16 +96,20 @@ img {
 }
 
 .footer {
-    background: #424649;
-    color: #ffffff;
+    background: #FF6B17;
+    color: white;
     clear: both;
     font-size: 1em;
     margin-top: 1.5em;
+    margin-bottom: 0px;
     padding: 1em;
     min-height: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /*position: absolute;*/
+    bottom:0;
+    width:100%;
 }
 
 .footer a {
@@ -173,23 +183,14 @@ img {
 .nav a.home, .nav a.list, .nav a.create {
     background-position: 0.7em center;
     background-repeat: no-repeat;
-    text-indent: 25px;
 }
 
-.nav a.home {
-    background-image: url(../images/skin/house.png);
-}
-
-.nav a.list {
-    background-image: url(../images/skin/database_table.png);
-}
-
-.nav a.create {
-    background-image: url(../images/skin/database_add.png);
+.imgHome{
+    height: 25px;
 }
 
 .nav li.dropdown.show ul.dropdown-menu {
-    background-color: #424649;
+    background-color: #FF6B17;
 }
 
 /* CREATE/EDIT FORMS AND SHOW PAGES */
@@ -211,12 +212,6 @@ fieldset,
 
 .fieldcontain {
     margin-top: 1em;
-}
-
-.fieldcontain label,
-.fieldcontain .property-label {
-    color: #666666;
-    text-align: right;
 }
 
 .fieldcontain .property-label {
@@ -506,36 +501,32 @@ th:hover, tr:hover {
 /* ACTION BUTTONS */
 
 .buttons {
-    background-color: #efefef;
     overflow: hidden;
     padding: 0.3em;
-    -moz-box-shadow: 0 0 3px 1px #aaaaaa;
-    -webkit-box-shadow: 0 0 3px 1px #aaaaaa;
-    box-shadow: 0 0 3px 1px #aaaaaa;
     margin: 0.1em 0 0 0;
     border: none;
 }
 
 .buttons input,
 .buttons a {
-    background-color: transparent;
-    border: 0;
-    color: #666666;
-    cursor: pointer;
-    display: inline-block;
-    margin: 0 0.25em 0;
-    overflow: visible;
-    padding: 0.25em 0.7em;
-    text-decoration: none;
+    border: 1px solid transparent;
+    color: white;
+    background-color: rgb(65, 131, 215);
 
-    -moz-border-radius: 0.3em;
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
+    border-radius: 4px;
+    transition: background-color 300ms ease 0s, color 300ms ease 0s;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    justify-content: center;
+    min-height: 3rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
 }
 
 .buttons input:hover, .buttons input:focus,
 .buttons a:hover, .buttons a:focus {
-    background-color: #999999;
+    background-color: #004085;
     color: #ffffff;
     outline: none;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
@@ -555,18 +546,6 @@ th:hover, tr:hover {
     background-position: 0.7em center;
     background-repeat: no-repeat;
     text-indent: 25px;
-}
-
-.buttons .delete {
-    background-image: url(../images/skin/database_delete.png);
-}
-
-.buttons .edit {
-    background-image: url(../images/skin/database_edit.png);
-}
-
-.buttons .save {
-    background-image: url(../images/skin/database_save.png);
 }
 
 a.skip {
@@ -610,4 +589,14 @@ body, html{
 .imgLinkedin{
     height: 30px;
     margin-left: 5px;
+}
+
+.titreLogo{
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.imageLogo{
+    height: 50px;
 }

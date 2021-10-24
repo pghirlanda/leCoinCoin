@@ -1,0 +1,9 @@
+#Fichier d'exemple si vous souhaitez ajouter une config personnelle
+#copier ce ficher et renommez le "application-development.yml" dans le même dossier (config)
+
+server:
+  port: 8081
+
+illustration:
+  path: "C:/Users/p.ghirlanda/Desktop/Cours/3A/MBDS/WEB/Projet/projet-grails-master/grails-app/assets/images/"
+  url: "http://localhost:8081/assets/"

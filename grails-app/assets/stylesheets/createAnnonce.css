@@ -1,0 +1,122 @@
+.titre{
+    display: flex;
+    align-items: center;
+
+}
+
+.titre1{
+    background: #fafafa;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-width: 75%;
+}
+
+.titre2{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: flex-start;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    margin-top: -0.8rem;
+    padding-right: 25px;
+    padding-top: 25px;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.loulou{
+    display: flex;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    align-items: flex-start;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.txt{
+    display: flex;
+    -webkit-align-items: flex-start;
+}
+
+.required-indicator{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #8191a0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+}
+
+.chps{
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+#active{
+    height: 15px;
+}
+
+.tout{
+    padding: 0 2.4rem;
+    text-align: center;
+    flex: 1;
+    padding-right: 250px;
+}
+
+.nom{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.checkbox{
+    display:flex;
+}
+
+.create{
+    background: transparent url(../images/add.png) 2px no-repeat;
+    background-size: 30px;
+    background-position-x: 45%;
+}
+
+.author{
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 8px;
+}
+
+#create, .inpt{
+    width: -webkit-fill-available;
+}
+
+input{
+    padding: 10px;
+    margin: 10px;
+}
+
+.choixrole{
+    width: -webkit-fill-available;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.act{
+    margin-left: 8px;
+}
+
+.buttons .create {
+    display: flex;
+    background-color: #4183d7;
+    color: black;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+}

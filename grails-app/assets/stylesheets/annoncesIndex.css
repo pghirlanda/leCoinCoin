@@ -4,23 +4,41 @@ html, body{
     padding: 0;
 }
 
-.annonces{
+.centre{
     display: flex;
-    flex-wrap: wrap;
-    max-width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.annonces{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 100%;
 }
 
 .annonce{
-    flex-grow: 1;
     border: black;
     border-radius: 10px;
     margin: 4%;
     padding: 4%;
+    box-shadow: 2px 3px 3px 3px lightgray;
 }
 
-.image{
+.illu{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.img{
     height: 100px;
-    width: 100px;
 }
 
 .titreprix{
@@ -48,4 +66,12 @@ html, body{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+}
+
+p{
+    font-weight: bold;
+}
+
+.nonactive{
+    opacity: 0.6;
 }

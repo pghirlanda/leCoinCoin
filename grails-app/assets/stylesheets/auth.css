@@ -16,8 +16,8 @@ body{
 
     background-color: rgb(255, 255, 255);
     background-image: url("../../assets/connexion.PNG");
-    background-position: left bottom;
-    background-size: auto;
+    background-position: bottom;
+    background-size: cover;
 }
 
 .inner{
@@ -112,6 +112,15 @@ h5{
     margin-bottom: 5%;
 }
 
+#remember_me_holder{
+    display: flex;
+    align-items: center;
+}
+
+.textresteco{
+    margin-left: 5px;
+}
+
 .creationCompte{
     text-align: center;
 }
@@ -120,4 +129,13 @@ h5{
     margin-bottom: 5%;
     margin-top: 2%;
     color: lightcoral;
+}
+
+.chk{
+    width: 20px;
+    height: 20px;
+}
+
+#login{
+    margin-top: 15px;
 }

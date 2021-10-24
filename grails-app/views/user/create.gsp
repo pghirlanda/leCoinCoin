@@ -3,15 +3,14 @@
 <head>
     <meta name="layout" content="main" />
     <g:set var="entityName" value="${message(code: 'user.label', default: 'User')}" />
-    <title><g:message code="default.create.label" args="[entityName]" /></title>
+    <title>Création d'un compte utilisateur</title>
     <link href="../../assets/createUser.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
     <a href="#create-user" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
     <div class="nav" role="navigation">
         <ul>
-            <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-            <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+            <li><g:link controller="login" action="auth"><img class="retour" src="../../assets/retour.png"/> Retour</g:link></li>
         </ul>
     </div>
 
@@ -56,6 +55,13 @@
                 <div class="fieldcontain">
                     <label for="tel">Numéro de téléphone</label><input type="text" name="tel" value="" maxlength="16" id="tel">
                 </div>
+
+                <sec:ifAllGranted roles="ROLE_ADMIN">
+                    <label>Rôle
+                        <span class="required-indicator">champ requis</span>
+                    </label>
+                    <g:select class="role" from="${annonces.estia.Role.list()}" name="nouveauRole" optionKey="id" optionValue="authority"/>
+                </sec:ifAllGranted>
 
                 <div class="pub">
                     <input class="checkbox" type="checkbox" checked /> Recevoir les bons plans de nos sites partenaires

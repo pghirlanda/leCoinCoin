@@ -7,7 +7,7 @@ grails.plugin.springsecurity.authority.className = 'annonces.estia.Role'
 grails.plugin.springsecurity.logout.postOnly = false
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/',               access: ['permitAll']],
-	[pattern: '/user/create',    access: ['permitAll']],
+	[pattern: '/user/**',        access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],
 	[pattern: '/index',          access: ['permitAll']],
 	[pattern: '/index.gsp',      access: ['permitAll']],
@@ -16,8 +16,10 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/**/js/**',       access: ['permitAll']],
 	[pattern: '/**/css/**',      access: ['permitAll']],
 	[pattern: '/**/images/**',   access: ['permitAll']],
-	[pattern: '/**/favicon.ico', access: ['permitAll']],
-	[pattern: '/dbconsole/**',   access: ['permitAll']]
+	[pattern: '/**/logopage.ico',access: ['permitAll']],
+	[pattern: '/dbconsole/**',   access: ['permitAll']],
+	[pattern: '/annonce/**',     access: ['permitAll']],
+	[pattern: '/illustration/**',access: ['permitAll']]
 ]
 
 grails.plugin.springsecurity.filterChain.chainMap = [
@@ -25,7 +27,7 @@ grails.plugin.springsecurity.filterChain.chainMap = [
 	[pattern: '/**/js/**',       filters: 'none'],
 	[pattern: '/**/css/**',      filters: 'none'],
 	[pattern: '/**/images/**',   filters: 'none'],
-	[pattern: '/**/favicon.ico', filters: 'none'],
+	[pattern: '/**/logopage.ico',filters: 'none'],
 	[pattern: '/**',             filters: 'JOINED_FILTERS']
 ]
 

@@ -1,0 +1,78 @@
+img{
+    height: 25px;
+}
+
+.checkbox {
+    height: 15px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "textnom nom"
+        "texttel tel"
+        "textmail mail"
+        "textrole role"
+        "ck ck";
+    justify-items: center;
+
+    border: black;
+    border-radius: 10px;
+    margin-bottom: 3%;
+    padding: 3% 4% 4% 4%;
+    box-shadow: 2px 3px 3px 3px lightgray;
+}
+
+.txtnomuser{
+    grid-area: textnom;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.nomuser{
+    grid-area: nom;
+}
+
+.texttel{
+    grid-area: texttel;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.tel{
+    grid-area: tel;
+}
+
+.textmail{
+    grid-area: textmail;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.mail{
+    grid-area: mail;
+}
+
+.textroleuser{
+    grid-area: textrole;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.roleuser{
+    grid-area: role;
+}
+
+.ckbox{
+    grid-area: ck;
+    display: flex;
+    text-align: center;
+    font-weight: lighter;
+    padding-top: 30px;
+}
+
+.save{
+    width: -webkit-fill-available;
+}

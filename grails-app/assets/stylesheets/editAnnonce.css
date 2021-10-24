@@ -1,0 +1,102 @@
+.illutrash{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.img{
+    height: 150px;
+}
+
+.poubelle{
+    height: 30px;
+}
+
+.illus{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.save{
+    width: -webkit-fill-available;
+}
+
+#active{
+    height: 15px;
+}
+
+.text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "txttitle title"
+        "txtdescription description"
+        "txtprice price"
+        "txtillustration illustration";
+    justify-items: center;
+    align-items: center;
+}
+
+.txttitle{
+    grid-area: txttitle;
+    font-size: medium;
+    font-weight: bolder;
+    padding-bottom: 2%;
+}
+
+.title{
+    grid-area: title;
+}
+
+.txtdescription{
+    grid-area: txtdescription;
+    font-size: medium;
+    font-weight: bolder;
+    padding-bottom: 2%;
+}
+
+.description{
+    grid-area: description;
+}
+
+.txtprice{
+    grid-area: txtprice;
+    font-size: medium;
+    font-weight: bolder;
+    padding-bottom: 2%;
+}
+
+.price{
+    grid-area: price;
+}
+
+.txtillustration{
+    grid-area: txtillustration;
+    font-size: medium;
+    font-weight: bolder;
+    padding-bottom: 2%;
+}
+
+.illustration{
+    grid-area: illustration;
+}
+
+.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.colonne{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.role{
+    text-align: center;
+}

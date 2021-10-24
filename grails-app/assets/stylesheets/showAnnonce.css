@@ -1,0 +1,170 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#image{
+    text-align: center;
+}
+
+.img{
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+.first{
+    display: flex;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 45px;
+}
+
+.titre{
+    color: #4183d7;
+    font-weight: bold;
+    font-size: x-large;
+    justify-content: flex-start;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.middle1{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+
+.Prix{
+    grid-area: prix;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+
+    text-decoration: underline;
+    font-size: larger;
+    flex-grow: 1;
+    padding-right: 55px;
+}
+
+.Prix1{
+    grid-area: prix;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: lighter;
+    flex-grow: 1;
+    padding-right: 40px;
+}
+
+.Description{
+    display: flex;
+
+    font-weight: bolder;
+
+    text-decoration: underline;
+    font-size: larger;
+    justify-content: flex-start;
+    padding-left: 40px;
+}
+
+.Description1{
+    display: flex;
+
+    font-weight: lighter;
+    padding-left: 40px;
+    justify-content: flex-start;
+}
+
+.second{
+    border-top: 1px solid #CCCCCC;
+    display: flex;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auteur{
+    display: flex;
+
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 20px;
+}
+
+.auteur1{
+    display: flex;
+
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.maj{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+}
+
+.maj1{
+    padding-left: 30px;
+}
+
+.buttons {
+    display: flex;
+    overflow: hidden;
+    padding: 0.3em;
+
+
+    margin: 0.1em 0 0 0;
+    border: none;
+    justify-content: center;
+}
+
+.edit{
+    text-decoration: none;
+}
+
+.buttons .delete {
+    display: flex;
+    background-color: #4183d7;
+    color: black;
+    align-items: center;
+    width: 250px;
+}
+
+.buttons .edit {
+    display: flex;
+
+    background-color: #4183d7;
+    color: black;
+    align-items: center;
+    margin-right: 10px;
+    width: 250px;
+}
+
+.delete{
+    background: transparent url(../images/trash.png) 2px no-repeat;
+    background-size: 30px;
+    background-position-x: left;
+}
+
+.edit{
+    background: transparent url(../images/ediit.png) 2px no-repeat;
+    background-size: 30px;
+    background-position-x: left;
+}
