@@ -1,5 +1,5 @@
 Contexte
-Lecoincoin est une société familiale qui existe depuis 1940, elle est gérée par Mr Gerard Lecoincoin et Mme Mathilde Lecoincoin.\n
+Lecoincoin est une société familiale qui existe depuis 1940, elle est gérée par Mr Gerard Lecoincoin et Mme Mathilde Lecoincoin.
 Lecoincoin est une entreprise de dépôt vente touchant à tout ce qui peut se vendre ou s’acheter.
 Lecoincoin a raté le tournant du numérique, il y a quelques décennies et aimerait vraiment pouvoir avoir une présence en ligne pour diffuser ses annonces.
 
